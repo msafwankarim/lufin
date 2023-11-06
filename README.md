@@ -18,10 +18,12 @@ LuFIn is a small yet powerful library that simplifies the process of indexing va
 To get started with the Lucene File Indexing Library, follow these steps:
 
 1. **Installation**: Download the [jar](https://github.com/msafwankarim/lufin/releases/download/v1.0/lufin-1.0.jar) file & add the library to your project as a dependency.
+
     ``` groovy
     implementation files("lufin-1.0.jar");
     ```
 2. **Usage**: Use the library to index your files. Here's a simple example in Java:
+
     ``` java 
    File sourceDirectory = Path.of("data", "data-source").toFile();
    Path indexPath = Path.of("data", "index");
