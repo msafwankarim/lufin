@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alerts>
+  <alert name="node-join" subject="On node join" text="The node {NodeIP} has joined the cache cluster {CacheName}"/>
+  <alert name="node-leave" subject="On node leave" text="The node {NodeIP} has left the cache cluster {CacheName}"/>
+  <alert name="partial-connectivity-detected" subject="On split brain" text="Partial connectivity has detected the cache cluster {CacheName}"/>
+  <alert name="cache-stop" subject="On cache stop" text="The cache {CacheName} has stoped successfully"/>
+  <alert name="cache-start" subject="On cache start" text="The cache {CacheName} has started successfully"/>
+  <alert name="cache-size" subject="On cache size exceed" text="The cache {CacheName} has exceeded"/>
+  <alert name="state-transfer-error" subject="On state transfer error" text="The cache {CacheName} has ended state transfer prematurely"/>
+  <alert name="state-transfer-stop" subject="On state transfer stop" text="The cache {CacheName} has completed state transfer"/>
+  <alert name="state-transfer-started" subject="On state transfer start" text="The cache {CacheName} has started state transfer"/>
+</alerts>

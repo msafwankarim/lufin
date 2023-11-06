@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <bridge-config config-id="64e33aab-966c-4ff3-a51e-05cfb77f6fc4" config-version="0" deployment-version="0" id="myBridge" bridge-nodes="20.200.20.21" num-bridge-nodes="1" bridge-active="20.200.20.21" bridge-port="10000" opt-timeout="60" src-cache="" topology="active-active" replicator-virtual-queue-size="2048MB" auto-start="False">
+    <log enabled="True" trace-errors="True" trace-notices="False" trace-warnings="False" trace-debug="False"/>
+    <queue optimized="False" size="2048"/>
+    <perf-counter enabled="True"/>
+  </bridge-config>
+</configuration>

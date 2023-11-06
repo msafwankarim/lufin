@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <application-config application-id="myapp" enable-cache-exception="true" default-region-name="DefaultRegion" key-case-sensitivity="false">
+    <cache-regions>
+      <region name="com.alachisoft.ncache.Person" cache-name="demoCache" priority="BelowNormal" expiration-type="Absolute" expiration-period="8"/>
+      <region name="CustomRegion" cache-name="demoCache" priority="default" expiration-type="sliding" expiration-period="8"/>
+      <region name="DefaultRegion" cache-name="demoCache" priority="default" expiration-type="none" expiration-period="0"/>
+    </cache-regions>
+    <database-dependencies>
+      <dependency entity-name="Person" type="oledb" sql-statement="select id from com.alachisoft.ncache.Person where id =&apos;?&apos;" cache-key-format="com.alachisoft.ncache.Person#[pk]" connection-string="Provider=SQLOLEDB;Data Source=20.200.20.45,1433;Initial Catalog=Northwind;User ID=john;Password=1234;"/>
+    </database-dependencies>
+  </application-config>
+</configuration>
