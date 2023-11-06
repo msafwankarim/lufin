@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<application-config default-cache-name="books">
-  <caches>
-    <cache name="books" ncacheid-instance="democache" priority="normal" expiration-type="absolute" expiration-period="300"/>
-  </caches>
-</application-config>
