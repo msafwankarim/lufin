@@ -1,2 +1,2 @@
-# lufin
-LuFIn (Lucene File Indexer)
+# LuFIn (Lucene File Indexer)
+
