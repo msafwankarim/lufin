@@ -13,7 +13,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class FileIndexer {
-
     private final File file;
 
     public FileIndexer(Path filePath) {
