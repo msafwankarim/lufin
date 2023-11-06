@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<license-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <authcode/>
+  <ext-code/>
+  <deact-code/>
+  <license-key/>
+  <deactivate-key/>
+  <product-info dotnet-install-mode="5" http-port="8251">
+    <install-code>p2exJ2fWV2GQ4DFXEnMyl3JTM9fXdpc=</install-code>
+    <install-dir>C:\Program Files\NCache\</install-dir>
+    <last-report-time/>
+    <platform>x64</platform>
+    <sp-version>5.3.2</sp-version>
+    <tcp-port>8250</tcp-port>
+    <java-home/>
+  </product-info>
+  <user-info>
+    <address/>
+    <city/>
+    <company>a</company>
+    <country/>
+    <email>setup@diya-tech.com</email>
+    <first-name>a</first-name>
+    <last-name>a</last-name>
+    <phone/>
+    <state/>
+    <zip/>
+  </user-info>
+  <deployment-info>
+    <environment-name/>
+    <client-cpus/>
+  </deployment-info>
+</license-config>

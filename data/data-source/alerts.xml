@@ -1,0 +1,64 @@
+ <!-- 
+	Multiple resources for a cache host process can be monitored for a specified duration by enabling following feature.
+	Resources will be monitored for specified duration with respect to their minimum and maximum threshold.
+	If monitored value is higher than or equal to maximum threshold or it is lower than or equal to minimum threshold, an event will appear in cache logs and event viewer.
+	Event in both cache logs and event viewer will appear after a specific Interval. Logging interval for both logs is provided in minute. 
+	For event viewer log its 60 minutes (1 hr) and for cache logs its 10 minute. 
+	
+	Duration is the sample interval for which a resource will be monitored and its value will be compared to thresholds.  
+	This interval is in seconds. Its minimum value is 5 second and maximum value is 15 seconds. 
+	
+	This xml contains default values of resources. 
+	
+	By default, this feature is disabled. 
+     -->
+<cache-health-alerts enable ="false" event-logging-interval ="60" cache-logging-interval ="10">
+
+ <!--
+	Memory percentage occupied by a cache host process. Percentage will be calculated with respect to 5 times of cache size. 
+	In case of partition of replica server cache, replica size is also included. 
+	Its minimum and maximum threshold limits are 0 and 100 respectively. 
+ -->
+    <resource name="memory" min-threshold ="0" max-threshold ="65" duration = "5"/>
+	 <!--
+	Bandwidth percentage occupied by a cache host process. 
+	Its minimum and maximum threshold limits are 0 and 100 respectively. 
+ -->
+    <resource name="network" min-threshold ="0" max-threshold ="60" duration= "5"/>
+	 <!--
+	Processor percentage occupied by a cache host process.
+	Its minimum and maximum threshold limits are 0 and 100 respectively. 
+ -->
+    <resource name="cpu" min-threshold ="0" max-threshold ="70" duration= "5"/>
+	 <!--
+	Number of requests received (meaning cache commands like add, get, insert, remove etc.) from all clients to this cache server.
+	Its minimum threshold limit is 1000 with no limit for maximum threshold. 
+ -->
+    <resource name="request-per-sec" min-threshold ="3000" max-threshold ="7000" duration= "5"/> 
+ <!--
+	Number of items in the bridge queue.
+	There is no minimum threshold logging for this resource. Only high threshold with minimum limit of 1000 will be logged. 
+ -->    
+	<resource name="bridge-queue" min-threshold ="1000" max-threshold ="5000" duration= "5"/> 
+	 <!--
+	This resource shows the disconnectrivity of clients during logging interval. An event will be logged if all clients have been disconnected from cache server.
+	It has no maximum or minimum threshold values. 
+ -->
+	<resource name="client-connections" min-threshold ="0" max-threshold ="60" duration= "5"/> 	
+	 <!--
+	Number of items in the Mirror queue. In case of partition of replica server cache, mirror queue of replica is also monitored.
+	There is no minimum threshold logging for this resource. Only high threshold with minimum limit of 1000 will be logged. 
+ -->
+	<resource name="mirror-queue" min-threshold ="1000" max-threshold ="5000" duration= "5"/> 
+	 <!--
+	Number of operations in Write-behind queue.
+	There is no minimum threshold logging for this resource. Only high threshold with minimum limit of 1000 will be logged. 
+ -->
+	<resource name="write-behind-queue" min-threshold ="1000" max-threshold ="5000" duration= "5"/> 	
+	 <!--
+	Average time in microseconds (us), taken to complete one cache-operation.
+	There is no minimum threshold logging for this resource. Only high threshold with minimum limit of 1000 will be logged. 
+ -->
+	<resource name="average-cache-operation" min-threshold ="500" max-threshold ="5000" duration= "5"/> 
+	
+</cache-health-alerts>
